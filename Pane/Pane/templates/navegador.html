@@ -1,0 +1,18 @@
+{% if sesion_activa == 0 %}
+<!--Taller-->
+<p>--Taller--</p>
+<a href="">Cerrar Sesión</a> |
+{% elif sesion_activa == 1 %}
+<!--Conductor-->
+<p>--Conductor--</p>
+<a href="">Cerrar Sesión</a> |
+{% elif sesion_activa == 2 %}
+<!--Administrador-->
+<p>--Administrador--</p>
+<a href="">Cerrar Sesión</a> |
+{% else %}
+<!--Sin sesión -->
+<p>--Sin sesión--</p>
+<a href="irInicioSesion">Iniciar Sesión </a> |
+<a href="irCrearCuenta">Registrarse </a>
+{% endif %}

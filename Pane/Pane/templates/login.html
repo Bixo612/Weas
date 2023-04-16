@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Iniciar Sesión{% endblock %}
+{% block body %}
+<h4>Iniciar sesión</h4>
+    <form class="col-6">
+      <div class="form-group">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" class="form-control" id="correo" name="correo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="clave">Contraseña:</label>
+        <input type="password" class="form-control" id="clave" name="clave" required>
+      </div>
+<br>
+
+      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    </form>
+{% endblock %}
+{% block navegador%}<a href="/">Inicio </a>{% endblock %}
