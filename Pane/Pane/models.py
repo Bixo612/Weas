@@ -6,6 +6,7 @@ class Taller(models.Model):
     direccion       = models.CharField(max_length=200)
     comuna          = models.CharField(max_length=100)
     telefono        = models.CharField(max_length=20)
+    clave           = models.CharField(max_length=100)
     email           = models.EmailField()
 
 class Cliente(models.Model):
@@ -21,3 +22,11 @@ class Comentario(models.Model):
     nota        = models.IntegerField()
     taller      = models.ForeignKey(Taller, on_delete=models.CASCADE)
     cliente     = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+
+class Moderador(models.Model):
+    nick    = models.CharField(max_length=100, primary_key=True)
+    email   = models.EmailField()
+    clave   = models.CharField(max_length=100)
+
+# Moderador.objects.create (nick = 'Papa', email = "papa@gmail.com",clave = "papa123")
+# Moderador.objects.create (nick = 'Tomate', email = "tomate@gmail.com",clave = "tomate")
