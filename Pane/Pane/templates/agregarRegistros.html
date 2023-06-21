@@ -4,13 +4,100 @@
 
 <h3>Agregar Registros</h3>
 <hr>
-<h4>Moderadores</h4>
+<br>
+
+<div class="container">
+    <h4>Moderadores</h4>
+    <form action="fx_agregar_moderador" method="post"> {% csrf_token %}
+        <div class="form-group">
+            <label for="nick">Nick:</label>
+            <input type="text" class="form-control" id="nick" name="nick" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="clave">Clave:</label>
+            <input type="password" class="form-control" id="clave" name="clave" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
 <hr>
-<h4>Talleres</h4>
+<div class="container">
+    <h4>Talleres</h4>
+    <form action="fx_agregar_taller" method="post"> {% csrf_token %}
+        <div class="form-group">
+            <label for="rol">Rol:</label>
+            <input type="text" class="form-control" id="ta_rol" name="ta_rol" required>
+        </div>
+
+        <div class="form-group">
+            <label for="razon_social">Razón Social:</label>
+            <input type="text" class="form-control" id="ta_razon_social" name="ta_razon_social" required>
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" class="form-control" id="ta_direccion" name="ta_direccion" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comuna">Comuna:</label>
+            <input type="text" class="form-control" id="ta_comuna" name="ta_comuna" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" class="form-control" id="ta_telefono" name="ta_telefono" required>
+        </div>
+
+        <div class="form-group">
+            <label for="clave">Clave:</label>
+            <input type="password" class="form-control" id="ta_clave" name="ta_clave" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="ta_email" name="ta_email" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
 <hr>
-<h4>Conductores</h4>
-<hr>
-<h4>Comentarios</h4>
+
+<div class="container">
+    <h4>Conductores</h4>
+    <form action="fx_agregar_conductor" method="post"> {% csrf_token %}
+        <div class="form-group">
+            <label for="nick">Nick:</label>
+            <input type="text" class="form-control" id="nick" name="nick" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="clave">Clave:</label>
+            <input type="password" class="form-control" id="clave" name="clave" required>
+        </div>
+
+        <div class="form-group">
+            <label for="patente">Patente:</label>
+            <input type="text" class="form-control" id="patente" name="patente" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+
 {% endblock %}
 
 {% block navegador%}{% include "navegador.html"%}{% endblock %}

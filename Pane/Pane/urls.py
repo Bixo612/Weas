@@ -23,6 +23,8 @@ urlpatterns = [
     path('', views.irInicio),
     path('irInicioSesion', views.irInicioSesion),
     path('irCrearCuenta', views.irCrearCuenta),
-    path('irTablas', views.irTablas),
+    path('Tablas', views.irTablas),
+    path('AgregarRegistros', views.irAgregarRegistros),
+    path('fx_agregar_taller', views.fx_agregar_taller),
 
 ]
