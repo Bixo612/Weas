@@ -2,13 +2,77 @@
 {% block titulo %}Inicio{% endblock %}
 {% block body %}
 
+<!--
+class Moderador(models.Model):
+    nick    = models.CharField(max_length=100, primary_key=True)
+    email   = models.EmailField()
+    clave   = models.CharField(max_length=100)
+
+-->
+
 <h3>Tablas</h3>
 <hr>
 <h4>Moderadores</h4>
-<p>{{mo}}</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nick</th>
+            <th>Email</th>
+            <th>Clave</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for mo in mo %}
+        <tr>
+            <td>{{mo.nick}}</td>
+            <td>{{mo.email}}</td>
+            <td>{{mo.clave}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 <hr>
 <h4>Talleres</h4>
-<p>{{ta}}</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Rol
+            </th>
+            <th>
+                Razon Social
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Comuna
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Clave
+            </th>
+            <th>
+                Email
+            </th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for ta in ta %}
+        <tr>
+            <td>{{ta.rol}}</td>
+            <td>{{ta.razon_social}}</td>
+            <td>{{ta.direccion}}</td>
+            <td>{{ta.comuna}}</td>
+            <td>{{ta.telefono}}</td>
+            <td>{{ta.clave}}</td>
+            <td>{{ta.email}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 <hr>
 <h4>Conductores</h4>
 <p>{{cl}}</p>
@@ -21,3 +85,4 @@
 {% endblock %}
 
 {% block navegador%}{% include "navegador.html"%}{% endblock %}
+

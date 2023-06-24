@@ -10,18 +10,18 @@
     <h4>Moderadores</h4>
     <form action="fx_agregar_moderador" method="post"> {% csrf_token %}
         <div class="form-group">
-            <label for="nick">Nick:</label>
-            <input type="text" class="form-control" id="nick" name="nick" required>
+            <label for="mo_nick">Nick:</label>
+            <input type="text" class="form-control" id="mo_nick" name="mo_nick" required>
         </div>
 
         <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+            <label for="mo_email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="mo_email" name="mo_email" required>
         </div>
 
         <div class="form-group">
-            <label for="clave">Clave:</label>
-            <input type="password" class="form-control" id="clave" name="clave" required>
+            <label for="mo_clave">Clave:</label>
+            <input type="password" class="form-control" id="mo_clave" name="mo_clave" required>
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Guardar</button>

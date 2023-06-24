@@ -26,5 +26,6 @@ urlpatterns = [
     path('Tablas', views.irTablas),
     path('AgregarRegistros', views.irAgregarRegistros),
     path('fx_agregar_taller', views.fx_agregar_taller),
+    path('fx_agregar_moderador', views.fx_agregar_moderador),
 
 ]
